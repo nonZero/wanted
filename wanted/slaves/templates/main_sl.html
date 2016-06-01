@@ -3,15 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SLAVES</title>
+    <title>
+        {% block title %}
+            {{ view.page_title }} | Wanted
+        {% endblock %}
+</title>
 </head>
 <body background="{% static "w.jpg" %}"
     style="background-repeat: repeat-y;background-position: center top; background-size: cover;">
 
+
+<div width="100%" style="position: absolute;bottom: 30%;">
        {% block content %}
             CONTENT
         {% endblock %}
-
+</div>
 
 </body>
 </html>

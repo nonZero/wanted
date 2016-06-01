@@ -13,10 +13,10 @@ class Slave(models.Model):
 
 class Master(models.Model):
     # user = models.ForeignKey(settings.AUTH_USER_MODEL, db_index=True)
-    s_fname = models.CharField(max_length=15)
-    s_lname = models.CharField(max_length=15)
-    s_descr = models.TextField()
-    s_join_date = models.DateField(auto_now=True)
+    m_fname = models.CharField(max_length=15)
+    m_lname = models.CharField(max_length=15)
+    m_descr = models.TextField()
+    m_join_date = models.DateField(auto_now=True)
 
 class Role(models.Model):
     # user = models.ForeignKey(settings.AUTH_USER_MODEL, db_index=True)

@@ -1,13 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>עבדים</title>
-</head>
-<body>
+{% extends "main_sl.html" %}
+
+{% block content %}
+
+    {% if object_list.count %}
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Desc</th>
+                <th>Joint Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for object in object_list %}
+                <tr>
+                    <td>
+                        <a href="{{ object.get_absolute_url }}">
+                            {{ object.s_fname }}
+                        </a>
+                    </td>
+                    <td>{{ object.s_lname }}</td>
+                    <td>{{ object.s_descr }}</td>
+                    <td>{{ object.s_join_date}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot>
+            <tr>
+                <!--<th align="right">total</th>
+                <th>${{ view.total }}</th>
+                <th></th>-->
+            </tr>
+            </tfoot>
+        </table>
+    {% else %}
+        No expenses.... yet!
+    {% endif %}
 
 
-להלה
-
-</body>
-</html>
+{% endblock %}
