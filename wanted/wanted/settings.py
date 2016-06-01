@@ -55,12 +55,12 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Wanted.urls'
+ROOT_URLCONF = 'wanted.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Wanted', 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'wanted', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Wanted.wsgi.application'
+WSGI_APPLICATION = 'wanted.wsgi.application'
 
 
 # Database
