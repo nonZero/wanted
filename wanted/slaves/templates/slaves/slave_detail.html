@@ -1,0 +1,30 @@
+{% extends "main_sl.html" %}
+
+{% block content %}
+
+    <a href="/sla">Back to all slaves</a>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            {{ object.s_fname }}
+        </li>
+        <li class="list-group-item">
+            {{ object.s_lname }}
+        </li>
+        <li class="list-group-item">
+            {{ object.s_descr }}
+        </li>
+        {% if object.s_descr %}
+            <li class="list-group-item">
+                {{ object.descr|linebreaks }}
+            </li>
+        {% endif %}
+        {% if object.cv %}
+            <li class="list-group-item">
+                <img src="{{ object.cv.url }}" class="img-responsive">
+
+            </li>
+        {% endif %}
+    </ul>
+
+{% endblock %}
